@@ -239,3 +239,6 @@
   font-weight: 300;
   font-size: 16px;
 }
+.domestic-shipments__shipment:nth-child(odd) {
+  flex-direction: row-reverse;
+}
