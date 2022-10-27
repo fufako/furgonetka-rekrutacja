@@ -3,7 +3,7 @@ const DomesticShipments = () => {
   return (
     <div className="domestic-shipments">
       <h2 className="domestic-shipments__title">
-        Szeroki wybór przesyłek krajowych
+        Szeroki wybór <span>przesyłek krajowych</span>
       </h2>
       <ShipmentTypes />
     </div>

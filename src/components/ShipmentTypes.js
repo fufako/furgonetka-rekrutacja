@@ -28,12 +28,12 @@ const UNUSUAL = {
   image: UnusualShipmentImg,
 }
 
-const shipments = [STANDARD, PALLET, CITY, UNUSUAL]
+const shipmentsTypes = [STANDARD, PALLET, CITY, UNUSUAL]
 
 const ShipmentTypes = () => {
   return (
     <>
-      {shipments.map((shipment) => (
+      {shipmentsTypes.map((shipment) => (
         <div className="domestic-shipments__shipment" key={shipment.title}>
           <div className="domestic-shipments__shipment-info-container">
             <h3 className="domestic-shipments__shipment-title">
