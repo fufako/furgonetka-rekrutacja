@@ -3,7 +3,13 @@ const Menu = () => {
   return (
     <>
       <div className="menu">
-        <img src={FurgonetkaLogo} alt="furgonetka-logo" />
+        <div className="menu__container">
+          <img
+            src={FurgonetkaLogo}
+            alt="furgonetka-logo"
+            className="menu__logo"
+          />
+        </div>
       </div>
     </>
   )

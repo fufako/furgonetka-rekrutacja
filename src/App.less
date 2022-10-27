@@ -4,16 +4,20 @@
 * {
   outline: 1px solid red;
 }
-.text-font( @fontWeight: 300;) {
+@primary-background: #ffffff;
+@secondary-background: #f6fbff;
+.text-font( @fontWeight: 300; @fontSize: 16px;) {
   font-family: "Open Sans";
   font-weight: @fontWeight;
+  font-size: @fontSize;
 }
-.title-font( @fontWeight: 500; @fontStyle: normal) {
+.title-font( @fontWeight: 500; @fontStyle: normal; @fontSize:48px;) {
   font-family: "Ubuntu", sans-serif;
   font-style: @fontStyle;
   font-weight: @fontWeight;
+  font-size: @fontSize;
 }
-.button(@bg-color: #0f92d4; @border-color:#1a3344) {
+.button(@bg-color: #0f92d4; @border-color:#1a3344;) {
   display: flex;
   flex-direction: row;
   justify-content: center;
@@ -23,19 +27,43 @@
   border: 1.5px solid @border-color;
   box-shadow: 2px 2px 0px @border-color;
   border-radius: 4px;
-  font-size: 18px;
   line-height: 25px;
   text-align: center;
   letter-spacing: 1px;
   text-transform: uppercase;
-  .text-font(600);
+  .text-font(600, 18px);
 }
 
 #root {
   .text-font();
   color: #1a3344;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 0px;
+  position: relative;
 }
-
+.menu {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  padding: 0px 100px;
+  gap: 32px;
+  &__container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 0px;
+    gap: 101px;
+    width: 1240px;
+    height: 48px;
+  }
+  &__logo {
+    width: 230.57px;
+    height: 48px;
+  }
+}
 .header {
   display: flex;
   flex-direction: row;
@@ -44,18 +72,15 @@
   padding: 0px 100px;
   gap: 15px;
   width: 1440px;
-  height: 355px;
   &__left-container {
     display: flex;
     flex-direction: column;
     align-items: flex-start;
     padding: 0px;
     width: 569px;
-    height: 340px;
   }
   &__subtitle {
-    .title-font(300, normal);
-    font-size: 13px;
+    .title-font(300, normal,13px);
     line-height: 13px;
     text-transform: uppercase;
     width: 83px;
@@ -63,13 +88,12 @@
     color: #666666;
   }
   &__title {
-    .title-font(300, italic);
-    font-size: 68px;
+    .title-font(300, italic, 68px);
     line-height: 75px;
     letter-spacing: -0.035em;
     margin: 0px; //xxx
     span {
-      .title-font(700,normal);
+      .title-font(700,normal,68px);
     }
   }
   &__description {
@@ -77,8 +101,8 @@
     font-size: 20px;
   }
   &__button {
-    .button();
     color: #ffffff;
+    .button();
   }
   &__image {
     width: 423px;
@@ -88,16 +112,34 @@
 
 .promotion {
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
+  justify-content: space-between;
   align-items: center;
-  padding: 0px;
-  width: 940px;
-  height: 165px;
+  padding: 0px 100px;
+  gap: 15px;
+  width: 1440px;
+  background-color: @secondary-background;
   &__container {
     display: flex;
     flex-direction: column;
+    justify-content: center; //xxx
     align-items: center;
     padding: 0px;
     gap: 24px;
+    width: 1440px;
+  }
+  &__title {
+    .title-font(500, italic, 48px);
+    margin: 0;
+    line-height: 110%;
+    span {
+      .title-font(500, normal, 48px);
+    }
+  }
+  &__description {
+    .text-font(300, 16px);
+    line-height: 150%;
+    text-align: center;
+    width: 564px;
   }
 }

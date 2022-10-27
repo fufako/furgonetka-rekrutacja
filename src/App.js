@@ -5,7 +5,9 @@ import Promotion from "./components/Promotion"
 const App = () => {
   return (
     <>
-      <Menu /> <Header /> <Promotion />
+      <Menu />
+      <Header />
+      <Promotion />
     </>
   )
 }
