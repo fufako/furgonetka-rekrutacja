@@ -14,6 +14,11 @@
   font-weight: @fontWeight;
 }
 .button(@bg-color: #0f92d4; @border-color:#1a3344) {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  padding: 8px 32px;
   background: @bg-color;
   border: 1.5px solid @border-color;
   box-shadow: 2px 2px 0px @border-color;
@@ -73,6 +78,7 @@
   }
   &__button {
     .button();
+    color: #ffffff;
   }
   &__image {
     width: 423px;
