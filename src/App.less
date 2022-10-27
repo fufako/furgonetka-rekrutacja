@@ -39,14 +39,13 @@
   color: #1a3344;
   display: flex;
   flex-direction: column;
-  align-items: flex-start;
+  //   align-items: flex-start;
   padding: 0px;
-  position: relative;
 }
 .menu {
   display: flex;
   flex-direction: row;
-  justify-content: center;
+  justify-content: flex-start;
   align-items: center;
   padding: 0px 100px;
   gap: 32px;
@@ -56,7 +55,7 @@
     align-items: center;
     padding: 0px;
     gap: 101px;
-    width: 1240px;
+    // width: 1240px;
     height: 48px;
   }
   &__logo {
@@ -67,17 +66,18 @@
 .header {
   display: flex;
   flex-direction: row;
-  justify-content: space-between;
+  justify-content: space-evenly;
   align-items: center;
   padding: 0px 100px;
   gap: 15px;
-  width: 1440px;
+  //   width: 1440px;
   &__left-container {
     display: flex;
     flex-direction: column;
     align-items: flex-start;
     padding: 0px;
     width: 569px;
+    position: relative;
   }
   &__subtitle {
     .title-font(300, normal,13px);
@@ -92,7 +92,7 @@
     line-height: 75px;
     letter-spacing: -0.035em;
     margin: 0px; //xxx
-    span {
+    &-bolder {
       .title-font(700,normal,68px);
     }
   }
@@ -108,16 +108,22 @@
     width: 423px;
     height: 352px;
   }
+  &__marker {
+    position: absolute;
+    left: 0px;
+    top: 176px;
+    z-index: -1;
+  }
 }
 
 .promotion {
   display: flex;
   flex-direction: row;
-  justify-content: space-between;
+  justify-content: center;
   align-items: center;
   padding: 0px 100px;
   gap: 15px;
-  width: 1440px;
+  //   width: 1440px;
   background-color: @secondary-background;
   &__container {
     display: flex;
@@ -126,12 +132,12 @@
     align-items: center;
     padding: 0px;
     gap: 24px;
-    width: 1440px;
+    // width: 1440px;
   }
   &__title {
     .title-font(500, italic, 48px);
-    margin: 0;
     line-height: 110%;
+    margin: 5px;
     span {
       .title-font(500, normal, 48px);
     }
@@ -141,5 +147,6 @@
     line-height: 150%;
     text-align: center;
     width: 564px;
+    margin: 0px;
   }
 }
