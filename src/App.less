@@ -354,10 +354,13 @@
     .text-font(300, 16px);
   }
   &__container {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+    &-main {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      gap: 24px;
+    }
     &-upper,
     &-lower {
       display: flex;

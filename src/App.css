@@ -410,11 +410,12 @@
   font-weight: 300;
   font-size: 16px;
 }
-.partners__container {
+.partners__container-main {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  gap: 24px;
 }
 .partners__container-upper,
 .partners__container-lower {
