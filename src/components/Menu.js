@@ -2,7 +2,7 @@ import FurgonetkaLogo from "../images/logo.svg"
 const Menu = () => {
   return (
     <>
-      <div className="menu">
+      <section className="menu">
         <div className="menu__container">
           <img
             src={FurgonetkaLogo}
@@ -10,7 +10,7 @@ const Menu = () => {
             className="menu__logo"
           />
         </div>
-      </div>
+      </section>
     </>
   )
 }

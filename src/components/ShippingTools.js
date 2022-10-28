@@ -6,7 +6,7 @@ import CourierToolImg from "../images/st-courier.svg"
 
 const ShippingTools = () => {
   return (
-    <div className="shipping-tools">
+    <section className="shipping-tools">
       <h2 className="shipping-tools__title">
         {" "}
         Narzędzia <span>do wysyłki</span>{" "}
@@ -30,7 +30,7 @@ const ShippingTools = () => {
           />
         </div>
       </div>
-    </div>
+    </section>
   )
 }
 

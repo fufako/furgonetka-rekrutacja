@@ -2,7 +2,7 @@ import HeaderImage from "../images/header-image.svg"
 import UnderlineMarker from "../images/marker-underline.svg"
 const Header = () => {
   return (
-    <div className="header">
+    <section className="header">
       <div className="header__left-container">
         <p className="header__subtitle">FURGONETKA</p>
         <h1 className="header__title">
@@ -23,7 +23,7 @@ const Header = () => {
         <button className="header__button"> NADAJ PRZESYŁKĘ</button>
       </div>
       <img src={HeaderImage} alt="workers" className="header__image" />
-    </div>
+    </section>
   )
 }
 

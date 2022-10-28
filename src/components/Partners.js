@@ -33,7 +33,7 @@ const partnersLowerRow = [
 
 const Partners = () => {
   return (
-    <div className="partners">
+    <section className="partners">
       <h2 className="partners__title">
         Przesyłki krajowe – <span>DHL, FedEx, DPD, InPost i inni</span>
       </h2>
@@ -55,7 +55,7 @@ const Partners = () => {
           ))}
         </div>
       </div>
-    </div>
+    </section>
   )
 }
 

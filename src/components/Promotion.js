@@ -1,6 +1,6 @@
 const Promotion = () => {
   return (
-    <div className="promotion">
+    <section className="promotion">
       <div className="promotion__container">
         <h2 className="promotion__title">
           Wybierz tanie i szybkie <span>przesyłki krajowe</span>
@@ -12,7 +12,7 @@ const Promotion = () => {
           korzystanie z dostępnych narzędzi.
         </p>
       </div>
-    </div>
+    </section>
   )
 }
 

@@ -8,7 +8,7 @@ const DELIGOO = { name: "DeliGoo", classNameSuffix: "deligoo" }
 const XPRESS = { name: "Xpress Delivery", classNameSuffix: "xpress" }
 const Delivery = () => {
   return (
-    <div class="delivery">
+    <section class="delivery">
       <h2 className="delivery__title">
         Dogodny <span>czas dostawy</span>
       </h2>
@@ -37,7 +37,7 @@ const Delivery = () => {
           />
         </div>
       </div>
-    </div>
+    </section>
   )
 }
 
