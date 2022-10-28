@@ -9,14 +9,17 @@ const XPRESS = "xpress delivery"
 const Delivery = () => {
   return (
     <div class="delivery">
-      <h2 className="delivery__title"> Dogodny czas dostawy</h2>
+      <h2 className="delivery__title">
+        {" "}
+        Dogodny <span>czas dostawy</span>{" "}
+      </h2>
       <p className="delivery__description">
         Jeśli zależy Ci na czasie, możesz przyspieszyć transport zleconej
         paczki. Z Furgonetką nadasz najszybsze przesyłki krajowe. Wystarczy, że
         dobierzesz odpowiednią usługę dodatkową w zależności od przewoźnika:
       </p>
       <div className="delivery__options">
-        <img src={DeliveryImg} alt="delivery" />
+        <img src={DeliveryImg} alt="delivery" className="delivery__image" />
         <div className="delivery__options-container">
           <DeliveryOption text="Paczka w Weekend" couriers={INPOST} />
           <DeliveryOption

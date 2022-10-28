@@ -296,3 +296,48 @@
 .shipping-tools__tool-content {
   width: 260px;
 }
+.delivery {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: #f6fbff;
+}
+.delivery__title {
+  font-family: "Ubuntu", sans-serif;
+  font-style: italic;
+  font-weight: 500;
+  font-size: 48px;
+  margin: 5px;
+}
+.delivery__title span {
+  font-family: "Ubuntu", sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 48px;
+}
+.delivery__description {
+  width: 564px;
+  line-height: 24px;
+  text-align: center;
+  font-family: "Open Sans";
+  font-weight: 300;
+  font-size: 16px;
+}
+.delivery__image {
+  width: 360px;
+  height: 214px;
+}
+.delivery__options {
+  display: flex;
+  flex-direction: row;
+  gap: 100px;
+  justify-content: center;
+  align-items: center;
+}
+.delivery__option {
+  display: flex;
+  flex-direction: row;
+  margin: 0;
+  padding: 0;
+}
