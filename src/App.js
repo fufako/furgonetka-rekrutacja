@@ -3,6 +3,7 @@ import Menu from "./components/Menu"
 import Header from "./components/Header"
 import Promotion from "./components/Promotion"
 import DomesticShipments from "./components/DomesticShipments"
+import ShippingTools from "./components/ShippingTools"
 const App = () => {
   return (
     <>
@@ -10,6 +11,7 @@ const App = () => {
       <Header />
       <Promotion />
       <DomesticShipments />
+      <ShippingTools />
     </>
   )
 }
