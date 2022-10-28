@@ -1,4 +1,4 @@
-import FurgonetkaLogo from "../images/logo.svg"
+import FurgonetkaLogo from "../images/menu/logo.svg"
 const Menu = () => {
   return (
     <>

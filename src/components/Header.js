@@ -1,5 +1,5 @@
-import HeaderImage from "../images/header-image.svg"
-import UnderlineMarker from "../images/marker-underline.svg"
+import HeaderImage from "../images/header/header-image.svg"
+import UnderlineMarker from "../images/header/marker-underline.svg"
 const Header = () => {
   return (
     <section className="header">

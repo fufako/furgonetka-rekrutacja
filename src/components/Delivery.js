@@ -1,5 +1,5 @@
-import DeliveryImg from "../images/delivery.svg"
-import CheckMark from "../images/check-mark.svg"
+import DeliveryImg from "../images/delivery/delivery.svg"
+import CheckMark from "../images/delivery/check-mark.svg"
 const INPOST = { name: "InPost", classNameSuffix: "inpost" }
 const DHL = { name: "DHL", classNameSuffix: "dhl" }
 const DPD = { name: "DPD", classNameSuffix: "dpd" }

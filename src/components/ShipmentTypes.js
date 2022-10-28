@@ -1,7 +1,7 @@
-import StandardShipmentImg from "../images/standard.svg"
-import PalletShipmentImg from "../images/palette.svg"
-import CityShipmentImg from "../images/city.svg"
-import UnusualShipmentImg from "../images/unusual.svg"
+import StandardShipmentImg from "../images/shipping-types/standard.svg"
+import PalletShipmentImg from "../images/shipping-types/palette.svg"
+import CityShipmentImg from "../images/shipping-types/city.svg"
+import UnusualShipmentImg from "../images/shipping-types/unusual.svg"
 
 const STANDARD = {
   title: "Przesyłki standardowe",

@@ -1,8 +1,8 @@
-import FollowToolImg from "../images/st-follow.svg"
-import AddressToolImg from "../images/st-address-book.svg"
-import TemplatesToolImg from "../images/st-templates.svg"
-import LabelToolImg from "../images/st-label.svg"
-import CourierToolImg from "../images/st-courier.svg"
+import FollowToolImg from "../images/shipping-tools/st-follow.svg"
+import AddressToolImg from "../images/shipping-tools/st-address-book.svg"
+import TemplatesToolImg from "../images/shipping-tools/st-templates.svg"
+import LabelToolImg from "../images/shipping-tools/st-label.svg"
+import CourierToolImg from "../images/shipping-tools/st-courier.svg"
 
 const ShippingTools = () => {
   return (
