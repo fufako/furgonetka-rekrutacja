@@ -1,11 +1,11 @@
 import DeliveryImg from "../images/delivery.svg"
 import CheckMark from "../images/check-mark.svg"
-const INPOST = "inpost"
-const DHL = "dhl"
-const DPD = "dpd"
-const POCZTEX = "pocztex"
-const DELIGOO = "deligoo"
-const XPRESS = "xpress delivery"
+const INPOST = { name: "InPost", classNameSuffix: "inpost" }
+const DHL = { name: "DHL", classNameSuffix: "dhl" }
+const DPD = { name: "DPD", classNameSuffix: "dpd" }
+const POCZTEX = { name: "Pocztex", classNameSuffix: "pocztex" }
+const DELIGOO = { name: "DeliGoo", classNameSuffix: "deligoo" }
+const XPRESS = { name: "Xpress Delivery", classNameSuffix: "xpress" }
 const Delivery = () => {
   return (
     <div class="delivery">
@@ -21,16 +21,16 @@ const Delivery = () => {
       <div className="delivery__options">
         <img src={DeliveryImg} alt="delivery" className="delivery__image" />
         <div className="delivery__options-container">
-          <DeliveryOption text="Paczka w Weekend" couriers={INPOST} />
+          <DeliveryOption text="Paczka w Weekend" couriers={[INPOST]} />
           <DeliveryOption
             text="Doręczenie przesyłki w sobotę "
             couriers={[DHL, INPOST, DPD]}
           />
-          <DeliveryOption text="Doręczenie do danej godziny" couriers={DPD} />
-          <DeliveryOption text="Doręczenie na drugi dzień" couriers={DPD} />
+          <DeliveryOption text="Doręczenie do danej godziny" couriers={[DPD]} />
+          <DeliveryOption text="Doręczenie na drugi dzień" couriers={[DPD]} />
           <DeliveryOption
             text="Doręczenie we wskazany dzień"
-            couriers={POCZTEX}
+            couriers={[POCZTEX]}
           />
           <DeliveryOption
             text="Przesyłka ekspresowa "
@@ -53,11 +53,17 @@ const DeliveryOption = ({ text, couriers }) => {
         className="delivery__option-image"
       />
       <p className="delivery__option-text">{text}</p>
-      <Courier />
+      <Courier couriers={couriers} />
     </div>
   )
 }
 
-const Courier = () => {
-  return
+const Courier = ({ couriers }) => {
+  return (
+    <>
+      {couriers.map(({ name, classNameSuffix }) => (
+        <div className={`delivery__courier-${classNameSuffix}`}>{name}</div>
+      ))}
+    </>
+  )
 }
