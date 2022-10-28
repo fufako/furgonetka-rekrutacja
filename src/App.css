@@ -242,3 +242,57 @@
 .domestic-shipments__shipment:nth-child(odd) {
   flex-direction: row-reverse;
 }
+.shipping-tools {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: #f6fbff;
+}
+.shipping-tools__title {
+  margin: 5px;
+  font-family: "Ubuntu", sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 48px;
+}
+.shipping-tools__title span {
+  font-family: "Ubuntu", sans-serif;
+  font-style: italic;
+  font-weight: 500;
+  font-size: 48px;
+}
+.shipping-tools__description {
+  font-family: "Open Sans";
+  font-weight: 300;
+  font-size: 16px;
+  line-height: 24px;
+  width: 564px;
+  text-align: center;
+}
+.shipping-tools__container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 40px;
+}
+.shipping-tools__container-upper,
+.shipping-tools__container-lower {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: flex-start;
+  text-align: center;
+  padding: 0px 100px;
+  gap: 100px;
+}
+.shipping-tools__container-lower {
+  justify-content: center;
+}
+.shipping-tools__tool-image {
+  width: 230px;
+  height: 158px;
+}
+.shipping-tools__tool-content {
+  width: 260px;
+}
