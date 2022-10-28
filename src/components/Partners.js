@@ -1,3 +1,17 @@
+import AmbroExpress from "../images/partners/AmbroExpress.svg"
+import Deligoo from "../images/partners/Deligoo.svg"
+import DHL from "../images/partners/DHL.svg"
+import DPD from "../images/partners/DPD.svg"
+import FedEx from "../images/partners/FedEx.svg"
+import GLS from "../images/partners/GLS.svg"
+import InPost from "../images/partners/InPost.svg"
+import Meest from "../images/partners/MEEST.svg"
+import Orlen from "../images/partners/Orlen.svg"
+import Pallex from "../images/partners/Pallex.svg"
+import Pocztex from "../images/partners/Pocztex.svg"
+import Ups from "../images/partners/UPS.svg"
+import XpressDelivery from "../images/partners/XpressDelivery.svg"
+
 const Partners = () => {
   return (
     <div className="partners">
