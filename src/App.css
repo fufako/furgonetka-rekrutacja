@@ -381,3 +381,32 @@
   background-color: #000000;
   color: #ffffff;
 }
+.partners {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+.partners__title {
+  width: 940px;
+  height: 106px;
+  margin: 5px;
+  font-family: "Ubuntu", sans-serif;
+  font-style: italic;
+  font-weight: 500;
+  font-size: 48px;
+}
+.partners__title span {
+  font-family: "Ubuntu", sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 48px;
+}
+.partners__description {
+  width: 564px;
+  height: 96px;
+  font-family: "Open Sans";
+  font-weight: 300;
+  font-size: 16px;
+}

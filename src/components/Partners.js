@@ -2,7 +2,7 @@ const Partners = () => {
   return (
     <div className="partners">
       <h2 className="partners__title">
-        Przesyłki krajowe – DHL, FedEx, DPD, InPost i inni
+        Przesyłki krajowe – <span>DHL, FedEx, DPD, InPost i inni</span>
       </h2>
       <p className="partners__description">
         Za pośrednictwem Furgonetki nadasz przesyłki krajowe z DHL, FedEx, DPD,

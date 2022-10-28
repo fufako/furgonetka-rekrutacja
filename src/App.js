@@ -5,6 +5,7 @@ import Promotion from "./components/Promotion"
 import DomesticShipments from "./components/DomesticShipments"
 import ShippingTools from "./components/ShippingTools"
 import Delivery from "./components/Delivery"
+import Partners from "./components/Partners"
 const App = () => {
   return (
     <>
@@ -14,6 +15,7 @@ const App = () => {
       <DomesticShipments />
       <ShippingTools />
       <Delivery />
+      <Partners />
     </>
   )
 }
