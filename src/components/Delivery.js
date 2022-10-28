@@ -10,8 +10,7 @@ const Delivery = () => {
   return (
     <div class="delivery">
       <h2 className="delivery__title">
-        {" "}
-        Dogodny <span>czas dostawy</span>{" "}
+        Dogodny <span>czas dostawy</span>
       </h2>
       <p className="delivery__description">
         Jeśli zależy Ci na czasie, możesz przyspieszyć transport zleconej
