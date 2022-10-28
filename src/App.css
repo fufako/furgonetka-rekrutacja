@@ -42,9 +42,6 @@
   font-display: swap;
   src: url(https://fonts.gstatic.com/s/ubuntu/v20/4iCv6KVjbNBYlgoCxCvTtw.ttf) format('truetype');
 }
-* {
-  outline: 1px solid red;
-}
 #root {
   font-family: "Open Sans";
   font-weight: 300;
@@ -340,4 +337,47 @@
   flex-direction: row;
   margin: 0;
   padding: 0;
+  gap: 15px;
+}
+.delivery__couriers-container {
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  font-family: "Open Sans";
+  font-weight: 600;
+  font-size: 10px;
+}
+.delivery__couriers-container p {
+  padding: 0 8px;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 2px;
+}
+.delivery__courier-inpost {
+  background-color: #ffcc01;
+  color: #000000;
+}
+.delivery__courier-dhl {
+  background-color: #ffcc01;
+  color: #cc0000;
+}
+.delivery__courier-dpd {
+  background-color: #e61c4a;
+  color: #ffffff;
+}
+.delivery__courier-pocztex {
+  background-color: #e61c4a;
+  color: #ffffff;
+}
+.delivery__courier-deligoo {
+  background-color: #2dc8ec;
+  color: #ffffff;
+}
+.delivery__courier-xpress {
+  background-color: #000000;
+  color: #ffffff;
 }

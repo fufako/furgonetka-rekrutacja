@@ -1,11 +1,21 @@
 @import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;600&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,500;0,700;1,500&display=swap");
 
-* {
-  outline: 1px solid red;
-}
+// * {
+//   outline: 1px solid red;
+// }
 @primary-background: #ffffff;
 @secondary-background: #f6fbff;
+
+@courier-bg-color-yellow: #ffcc01;
+@courier-bg-color-pink: #e61c4a;
+@courier-bg-color-blue: #2dc8ec;
+@courier-bg-color-black: #000000;
+
+@courier-text-color-black: #000000;
+@courier-text-color-red: #cc0000;
+@courier-text-color-red: #cc0000;
+@courier-text-color-white: #ffffff;
 .text-font( @fontWeight: 300; @fontSize: 16px;) {
   font-family: "Open Sans";
   font-weight: @fontWeight;
@@ -279,5 +289,46 @@
     flex-direction: row;
     margin: 0;
     padding: 0;
+    gap: 15px;
+  }
+  &__couriers-container {
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    .text-font(600, 10px);
+    p {
+      padding: 0 8px;
+      text-align: center;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      border-radius: 2px;
+    }
+  }
+  &__courier-inpost {
+    background-color: @courier-bg-color-yellow;
+    color: @courier-text-color-black;
+  }
+  &__courier-dhl {
+    background-color: @courier-bg-color-yellow;
+    color: @courier-text-color-red;
+  }
+  &__courier-dpd {
+    background-color: @courier-bg-color-pink;
+    color: @courier-text-color-white;
+  }
+  &__courier-pocztex {
+    background-color: @courier-bg-color-pink;
+    color: @courier-text-color-white;
+  }
+  &__courier-deligoo {
+    background-color: @courier-bg-color-blue;
+    color: @courier-text-color-white;
+  }
+  &__courier-xpress {
+    background-color: @courier-bg-color-black;
+    color: @courier-text-color-white;
   }
 }

@@ -61,9 +61,11 @@ const DeliveryOption = ({ text, couriers }) => {
 const Courier = ({ couriers }) => {
   return (
     <>
-      {couriers.map(({ name, classNameSuffix }) => (
-        <div className={`delivery__courier-${classNameSuffix}`}>{name}</div>
-      ))}
+      <div className="delivery__couriers-container">
+        {couriers.map(({ name, classNameSuffix }) => (
+          <p className={`delivery__courier-${classNameSuffix}`}>{name}</p>
+        ))}
+      </div>
     </>
   )
 }
