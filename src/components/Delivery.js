@@ -9,7 +9,7 @@ const DELIGOO = { name: "DeliGoo", classNameSuffix: "deligoo" }
 const XPRESS = { name: "Xpress Delivery", classNameSuffix: "xpress" }
 
 const Delivery = () => (
-  <section class="delivery">
+  <section className="delivery">
     <h2 className="delivery__title">
       Dogodny <span>czas dostawy</span>
     </h2>
@@ -54,7 +54,9 @@ const DeliveryOption = ({ text, couriers }) => (
 const Courier = ({ couriers }) => (
   <div className="delivery__couriers-container">
     {couriers.map(({ name, classNameSuffix }) => (
-      <p className={`delivery__courier-${classNameSuffix}`}>{name}</p>
+      <p className={`delivery__courier-${classNameSuffix}`} key={name}>
+        {name}
+      </p>
     ))}
   </div>
 )
