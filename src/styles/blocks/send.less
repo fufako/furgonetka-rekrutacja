@@ -1,0 +1,26 @@
+.send {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 100px;
+  position: relative;
+  background-color: @secondary-background;
+  &__image {
+    position: relative;
+    top: -40px;
+  }
+  &__title {
+    .title-font(500,normal,48px);
+    width: 664px;
+    margin: 5px;
+    span {
+      .title-font(500,italic,48px);
+    }
+  }
+  &__description {
+    .text-font(300,16px);
+  }
+  &__button {
+    .button(@button-bg-color-yellow, @button-border-color-yellow);
+  }
+}
