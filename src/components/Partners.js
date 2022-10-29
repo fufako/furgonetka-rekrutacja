@@ -35,7 +35,7 @@ const partnersLowerRow = [
   XpressDeliveryLogo,
   PallexLogo,
 ]
-
+//KEYS?
 const Partners = () => {
   return (
     <section className="partners">
@@ -51,12 +51,12 @@ const Partners = () => {
       <div className="partners__container-main">
         <div className="partners__container-upper">
           {partnersUpperRow.map((partner) => (
-            <img src={partner} alt="partner-logo"></img>
+            <img src={partner} alt="partner-logo" key={partner}></img>
           ))}
         </div>
         <div className="partners__container-lower">
           {partnersLowerRow.map((partner) => (
-            <img src={partner} alt="partner-logo"></img>
+            <img src={partner} alt="partner-logo" key={partner}></img>
           ))}
         </div>
       </div>
