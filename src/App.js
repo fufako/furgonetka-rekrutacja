@@ -7,6 +7,7 @@ import ShippingTools from "./components/ShippingTools"
 import Delivery from "./components/Delivery"
 import Partners from "./components/Partners"
 import Send from "./components/Send"
+import Contact from "./components/Contact"
 
 const App = () => (
   <>
@@ -18,6 +19,7 @@ const App = () => (
     <Delivery />
     <Partners />
     <Send />
+    <Contact />
   </>
 )
 
