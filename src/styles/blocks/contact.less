@@ -1,0 +1,51 @@
+.contact {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: @secondary-background;
+  padding: 100px;
+  &__title {
+    margin: 5px;
+    .title-font(500,normal,48px);
+    span {
+      .title-font(500,italic,48px);
+    }
+  }
+  &__description {
+    .text-font(300, 16px);
+    width: 480px;
+  }
+  &__form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    &-label {
+      .text-font(400, 14px);
+      margin: 10px 0;
+    }
+    &-input {
+      .input();
+    }
+    &-textarea {
+      .input();
+      width: 768px;
+      height: 321px;
+      margin-bottom: 10px;
+    }
+    &-error-message {
+      margin: 0px;
+      padding: 0px;
+      color: @error-color;
+      .text-font(400,12px);
+    }
+    &-button {
+      width: 280px;
+      .button(@button-bg-color-yellow, @button-border-color-yellow);
+      &:last-child {
+        text-align: center;
+        align-self: center;
+      }
+    }
+  }
+}
