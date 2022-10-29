@@ -13,6 +13,11 @@ import AmbroExpressLogo from "../images/partners/AmbroExpress.svg"
 import XpressDeliveryLogo from "../images/partners/XpressDelivery.svg"
 import PallexLogo from "../images/partners/Pallex.svg"
 
+// Nie wiedziałem czy partnerzy powinni być podzieleni na tych w górnym i dolnym rzędzie z racji,
+// przykładowo faktu, że partnerzy w górnym rzędzie są ważniejszymi partnerami dla serwisu.
+// Mogłbym po prostu zmapować wszystkich partnerów i wrzucić ich do jednego kontenera,
+// jednak zostałem przy rozwiązaniu z górnym i dolnym kontenerem.
+
 const partnersUpperRow = [
   DhlLogo,
   FedExLogo,
