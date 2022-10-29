@@ -1,0 +1,27 @@
+.text-font( @fontWeight: 300; @fontSize: 16px;) {
+  font-family: "Open Sans";
+  font-weight: @fontWeight;
+  font-size: @fontSize;
+}
+.title-font( @fontWeight: 500; @fontStyle: normal; @fontSize:48px;) {
+  font-family: "Ubuntu", sans-serif;
+  font-style: @fontStyle;
+  font-weight: @fontWeight;
+  font-size: @fontSize;
+}
+.button(@bg-color: #0f92d4; @border-color:#1a3344;) {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  padding: 8px 32px;
+  background: @bg-color;
+  border: 1.5px solid @border-color;
+  box-shadow: 2px 2px 0px @border-color;
+  border-radius: 4px;
+  line-height: 25px;
+  text-align: center;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  .text-font(600, 18px);
+}

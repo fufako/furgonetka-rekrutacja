@@ -1,0 +1,42 @@
+.domestic-shipments {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 30px;
+  &__title {
+    .title-font(500, normal, 48px);
+    span {
+      .title-font(500, italic, 48px);
+    }
+  }
+  &__shipment {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: 0px;
+    gap: 96px;
+    width: 1220px;
+    height: 250px;
+    &-info-container {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: flex-start;
+      padding: 0px 0px 0px 32px;
+      width: 496px;
+      height: 149px;
+    }
+    &-title {
+      .title-font(700, normal, 32px);
+      margin: 10px;
+    }
+    &-description {
+      .text-font(300, 16px);
+    }
+    &:nth-child(odd) {
+      flex-direction: row-reverse;
+    }
+  }
+}

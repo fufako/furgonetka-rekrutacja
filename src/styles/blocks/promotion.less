@@ -1,0 +1,34 @@
+.promotion {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  padding: 0px 100px;
+  gap: 15px;
+  //   width: 1440px;
+  background-color: @secondary-background;
+  &__container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center; //xxx
+    align-items: center;
+    padding: 0px;
+    gap: 24px;
+    // width: 1440px;
+  }
+  &__title {
+    .title-font(500, italic, 48px);
+    line-height: 110%;
+    margin: 5px;
+    span {
+      .title-font(500, normal, 48px);
+    }
+  }
+  &__description {
+    .text-font(300, 16px);
+    line-height: 150%;
+    text-align: center;
+    width: 564px;
+    margin: 0px;
+  }
+}

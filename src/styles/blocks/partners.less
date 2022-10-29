@@ -1,0 +1,36 @@
+.partners {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  &__title {
+    width: 940px;
+    height: 106px;
+    margin: 5px;
+    .title-font(500, italic, 48px);
+    span {
+      .title-font(500, normal, 48px);
+    }
+  }
+  &__description {
+    width: 564px;
+    height: 96px;
+    .text-font(300, 16px);
+  }
+  &__container {
+    &-main {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      gap: 24px;
+    }
+    &-upper,
+    &-lower {
+      display: flex;
+      gap: 28px;
+      padding: 0;
+    }
+  }
+}

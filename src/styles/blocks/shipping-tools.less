@@ -1,0 +1,49 @@
+.shipping-tools {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: @secondary-background;
+  &__title {
+    margin: 5px;
+    .title-font(500, normal, 48px);
+    span {
+      .title-font(500, italic, 48px);
+    }
+  }
+  &__description {
+    .text-font(300, 16px);
+    line-height: 24px;
+    width: 564px;
+    text-align: center;
+  }
+  &__container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 40px;
+
+    &-upper,
+    &-lower {
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      align-items: flex-start;
+      text-align: center;
+      padding: 0px 100px;
+      gap: 100px;
+    }
+    &-lower {
+      justify-content: center;
+    }
+  }
+  &__tool {
+    &-image {
+      width: 230px;
+      height: 158px;
+    }
+    &-content {
+      width: 260px;
+    }
+  }
+}

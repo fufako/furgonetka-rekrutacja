@@ -1,0 +1,78 @@
+.delivery {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: @secondary-background;
+  &__title {
+    .title-font(500, italic, 48px);
+    margin: 5px;
+    span {
+      .title-font(500, normal, 48px);
+    }
+  }
+  &__description {
+    width: 564px;
+    line-height: 24px;
+    text-align: center;
+    .text-font(300, 16px);
+  }
+  &__image {
+    width: 360px;
+    height: 214px;
+  }
+  &__options {
+    display: flex;
+    flex-direction: row;
+    gap: 100px;
+    justify-content: center;
+    align-items: center;
+  }
+  &__option {
+    display: flex;
+    flex-direction: row;
+    margin: 0;
+    padding: 0;
+    gap: 15px;
+  }
+  &__couriers-container {
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    .text-font(600, 10px);
+    p {
+      padding: 0 8px;
+      text-align: center;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      border-radius: 2px;
+    }
+  }
+  &__courier-inpost {
+    background-color: @courier-bg-color-yellow;
+    color: @courier-text-color-black;
+  }
+  &__courier-dhl {
+    background-color: @courier-bg-color-yellow;
+    color: @courier-text-color-red;
+  }
+  &__courier-dpd {
+    background-color: @courier-bg-color-pink;
+    color: @courier-text-color-white;
+  }
+  &__courier-pocztex {
+    background-color: @courier-bg-color-pink;
+    color: @courier-text-color-white;
+  }
+  &__courier-deligoo {
+    background-color: @courier-bg-color-blue;
+    color: @courier-text-color-white;
+  }
+  &__courier-xpress {
+    background-color: @courier-bg-color-black;
+    color: @courier-text-color-white;
+  }
+}
