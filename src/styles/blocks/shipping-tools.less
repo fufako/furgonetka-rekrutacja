@@ -16,7 +16,7 @@
   &__description {
     .text-font(300, 16px);
     line-height: 24px;
-    width: 564px;
+    max-width: 564px;
     text-align: center;
   }
   &__container {
@@ -44,21 +44,44 @@
       width: 230px;
       height: 158px;
     }
-    &-content {
-      width: 260px;
-    }
   }
   @media @tablet {
+    padding: 100px 20px;
+    &__title {
+      .title-font(500, italic, 48px);
+      line-height: 48px;
+      text-align: center;
+      span {
+        .title-font(500,normal,48px);
+      }
+    }
+    &__container {
+      max-width: 300px;
+      gap: 10px;
+      &-upper {
+        gap: 5px;
+        padding: 0px;
+      }
+      &-lower {
+        gap: 30px;
+        padding: 0px;
+      }
+    }
+    &__tool {
+      &-image {
+        width: fit-content;
+      }
+    }
   }
   @media @phone {
     padding: 20px;
     &__title {
       text-align: left;
-      .title-font(300, italic, 38px);
+      .title-font(500, italic, 38px);
       line-height: 48px;
       text-align: center;
       span {
-        .title-font(700,normal,38px);
+        .title-font(500,normal,38px);
       }
     }
     &__description {

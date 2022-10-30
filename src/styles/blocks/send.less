@@ -26,6 +26,34 @@
   &__button {
     .button(@button-bg-color-yellow, @button-border-color-yellow);
   }
+  @media @tablet {
+    padding: 100px 20px;
+    position: relative;
+    &__title {
+      width: auto;
+      .title-font(500, italic, 38px);
+      line-height: 48px;
+      text-align: center;
+      span {
+        .title-font(500,normal,38px);
+      }
+    }
+    &__right-container {
+      display: flex;
+      flex-direction: column;
+      z-index: 1;
+      justify-content: center;
+      align-items: center;
+    }
+    &__image {
+      position: absolute;
+      opacity: 0.2;
+      top: 0;
+    }
+    &__description {
+      text-align: center;
+    }
+  }
   @media @phone {
     padding: 20px;
     position: relative;
@@ -36,15 +64,15 @@
     }
     &__title {
       width: auto;
-      .title-font(300, italic-light, 38px);
+      .title-font(500, italic, 38px);
       line-height: 48px;
       text-align: center;
       span {
-        .title-font(700,normal,38px);
+        .title-font(500,normal,38px);
       }
     }
     &__description {
-      width: 320px;
+      max-width: 320px;
       margin: 60px;
       text-align: center;
     }

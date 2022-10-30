@@ -11,7 +11,7 @@
     flex-direction: column;
     align-items: flex-start;
     padding: 0px;
-    width: 569px;
+    max-width: 569px;
     position: relative;
   }
 
@@ -25,7 +25,7 @@
   }
 
   &__title {
-    .title-font(300, italic-light, 68px);
+    .title-font(300, italic, 68px);
     line-height: 75px;
     letter-spacing: -0.035em;
     align-items: center;
@@ -38,6 +38,7 @@
   &__description {
     line-height: 27px;
     font-size: 20px;
+    margin: 0 0 20px 0;
   }
   &__button {
     color: #ffffff;
@@ -49,7 +50,7 @@
   }
   &__marker {
     position: relative;
-    top: -45px;
+    top: -10px;
     z-index: -1;
   }
   @media @tablet {
@@ -70,7 +71,7 @@
     &__title {
       position: relative;
       margin: 40px 0;
-      .title-font(300, italic-light, 58px);
+      .title-font(300, italic, 58px);
       line-height: 58px;
 
       span {
@@ -103,7 +104,7 @@
       display: none;
     }
     &__title {
-      .title-font(300, italic-light, 48px);
+      .title-font(300, italic, 48px);
       line-height: 48px;
       text-align: center;
       span {

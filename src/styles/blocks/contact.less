@@ -86,15 +86,35 @@
       .title-font(500, normal, 48px);
     }
   }
+  @media @tablet {
+    padding: 100px 20px 20px 20px;
+    &__title {
+      width: auto;
+      .title-font(500, italic, 48px);
+      line-height: 48px;
+      text-align: center;
+      span {
+        .title-font(500,normal,48px);
+      }
+    }
+    &__description {
+      margin: 20px;
+      text-align: center;
+    }
+    &__form {
+      min-width: 400px;
+      justify-content: center;
+    }
+  }
   @media @phone {
     padding: 100px 20px 20px 20px;
     &__title {
       width: auto;
-      .title-font(300, italic-light, 38px);
+      .title-font(500, italic, 38px);
       line-height: 48px;
       text-align: center;
       span {
-        .title-font(700,normal,38px);
+        .title-font(500,normal,38px);
       }
     }
     &__description {
@@ -103,7 +123,7 @@
       text-align: center;
     }
     &__form {
-      min-width: 320px;
+      max-width: 320px;
       justify-content: center;
     }
   }

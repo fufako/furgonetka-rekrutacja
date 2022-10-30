@@ -7,7 +7,6 @@
   padding: 100px;
   &__title {
     max-width: 940px;
-    height: 106px;
     margin: 5px;
     .title-font(500, italic, 48px);
     span {
@@ -15,7 +14,7 @@
     }
   }
   &__description {
-    width: 564px;
+    max-width: 564px;
     height: 96px;
     .text-font(300, 16px);
   }
@@ -25,18 +24,34 @@
     justify-content: center;
     align-items: center;
     gap: 24px;
-    width: 700px;
+    max-width: 700px;
     flex-wrap: wrap;
   }
-  @media @phone {
-    padding: 20px;
+  @media @tablet {
+    padding: 100px 20px;
     &__title {
       width: auto;
-      .title-font(300, italic-light, 38px);
+      .title-font(500, italic, 38px);
       line-height: 48px;
       text-align: center;
       span {
-        .title-font(700,normal,38px);
+        .title-font(500,normal,38px);
+      }
+    }
+    &__container {
+      margin-top: 20px;
+      padding: 20px;
+    }
+  }
+  @media @phone {
+    padding: 100px 20px;
+    &__title {
+      width: auto;
+      .title-font(500, italic, 38px);
+      line-height: 48px;
+      text-align: center;
+      span {
+        .title-font(500,normal,38px);
       }
     }
     &__description {
