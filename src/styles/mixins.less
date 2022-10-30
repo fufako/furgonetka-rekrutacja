@@ -23,7 +23,13 @@
   text-align: center;
   letter-spacing: 1px;
   text-transform: uppercase;
+  transform: scale(1);
+  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  cursor: pointer;
   .text-font(600, 18px);
+  &:hover {
+    transform: scale(1.05);
+  }
 }
 
 .input() {
