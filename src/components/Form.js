@@ -1,10 +1,11 @@
 import { useForm } from "react-hook-form"
 const Form = () => {
+  const methods = useForm()
   const {
     register,
     handleSubmit,
     formState: { errors },
-  } = useForm()
+  } = methods
   const onSubmit = (data) => {
     console.log(data)
   }
@@ -20,6 +21,12 @@ const Form = () => {
   const lastNameLongMessage = "Podana wartość jest za długa"
   const lastNameShortMessage = "Podana wartość jest za krótka"
 
+  const mailMessage = "Podany e-mail jest niepoprawny"
+
+  const mailRegex =
+    /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/
+  const nameRegex = /^[a-zA-Z]/
+
   return (
     <form onSubmit={handleSubmit(onSubmit)} className="contact__form">
       <label htmlFor="phoneNumber" className="contact__form-label">
@@ -28,11 +35,14 @@ const Form = () => {
       <input
         name="phoneNumber"
         type={"number"}
-        className="contact__form-input"
+        // {...(errors.phoneNumber && {className:"contact__form-input"})}
+        className={`contact__form-input ${
+          errors.phoneNumber ? "contact__form-input--error" : ""
+        }`}
         {...register("phoneNumber", {
           required: { value: true, message: emptyMessage },
-          min: { value: 9, message: phoneLengthMessage },
-          max: { value: 14, message: "phoneLengthMessage" },
+          minLength: { value: 9, message: phoneLengthMessage },
+          maxLength: { value: 14, message: phoneLengthMessage },
         })}
       />
       {errors.phoneNumber && (
@@ -50,9 +60,9 @@ const Form = () => {
         className="contact__form-input"
         {...register("firstName", {
           required: { value: true, message: emptyMessage },
-          pattern: { value: /^[a-zA-Z]/, message: nameLettersMessage },
-          min: { value: 2, message: nameShortMessage },
-          max: { value: 45, message: nameLongMessage },
+          pattern: { value: nameRegex, message: nameLettersMessage },
+          minLength: { value: 2, message: nameShortMessage },
+          maxLength: { value: 45, message: nameLongMessage },
         })}
       />
       {errors.firstName && (
@@ -70,8 +80,8 @@ const Form = () => {
         className="contact__form-input"
         {...register("lastName", {
           required: { value: true, message: emptyMessage },
-          min: { value: 2, message: lastNameShortMessage },
-          max: { value: 120, message: lastNameLongMessage },
+          minLength: { value: 2, message: lastNameShortMessage },
+          maxLength: { value: 120, message: lastNameLongMessage },
         })}
       />
       {errors.lastName && (
@@ -79,7 +89,7 @@ const Form = () => {
       )}
 
       <label htmlFor="mail" className="contact__form-label">
-        Twoje nazwisko / nazwa firmy
+        Twój adres e-mail
       </label>
       <input
         name={"mail"}
@@ -87,6 +97,10 @@ const Form = () => {
         className="contact__form-input"
         {...register("mail", {
           required: { value: true, message: emptyMessage },
+          pattern: {
+            value: mailRegex,
+            message: mailMessage,
+          },
         })}
       />
       {errors.mail && (
@@ -96,7 +110,7 @@ const Form = () => {
       <label htmlFor="message" className="contact__form-label">
         Wiadomość (opcjonalnie)
       </label>
-      <input
+      <textarea
         name={"message"}
         type={"text"}
         className="contact__form-textarea"
@@ -106,10 +120,25 @@ const Form = () => {
         <p className="contact__form-error-message">{errors.message.message}</p>
       )}
       <button type="submit" className="contact__form-button">
-        Submit
+        WYŚLIJ SWÓJ KONTAKT
       </button>
     </form>
   )
 }
 
 export default Form
+
+const Input = ({ name, config, className, type, register, errors }) => {
+  const error = errors[name]?.message
+
+  return (
+    <>
+      <input
+        className={`${className} ${error ? `${className}--error` : ""}`}
+        type={type}
+        {...register(name, config)}
+      />
+      {error && <p className="contact__form-error-message">{error}</p>}
+    </>
+  )
+}
