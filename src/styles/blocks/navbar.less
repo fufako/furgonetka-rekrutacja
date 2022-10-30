@@ -4,19 +4,27 @@
   justify-content: flex-start;
   align-items: center;
   padding: 20px 100px;
-  gap: 32px;
 
   &__container {
     display: flex;
     flex-direction: row;
     align-items: center;
     padding: 0px;
-    gap: 101px;
     height: 48px;
   }
 
   &__logo {
     width: 230.57px;
     height: 48px;
+  }
+  @media @tablet {
+    justify-content: center;
+  }
+  @media @phone {
+    justify-content: center;
+    &__logo {
+      width: 200px;
+      height: 38px;
+    }
   }
 }

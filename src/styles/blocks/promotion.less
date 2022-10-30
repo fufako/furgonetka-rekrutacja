@@ -31,4 +31,25 @@
     width: 564px;
     margin: 0px;
   }
+
+  @media @tablet {
+    justify-content: center;
+  }
+  @media @phone {
+    &__container {
+      padding: 10px;
+      width: 320px;
+    }
+    &__title {
+      .title-font(300, italic-light, 38px);
+      line-height: 48px;
+      text-align: center;
+      span {
+        .title-font(700,normal,38px);
+      }
+    }
+    &__description {
+      width: 320px;
+    }
+  }
 }

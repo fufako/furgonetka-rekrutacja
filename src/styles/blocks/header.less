@@ -5,7 +5,6 @@
   align-items: center;
   padding: 100px;
   gap: 15px;
-  //   width: 1440px;
 
   &__left-container {
     display: flex;
@@ -30,7 +29,7 @@
     line-height: 75px;
     letter-spacing: -0.035em;
     margin: 0px; //xxx
-    &-bolder {
+    span {
       .title-font(700,normal,68px);
     }
   }
@@ -51,5 +50,44 @@
     left: 0px;
     top: 176px;
     z-index: -1;
+  }
+  @media @tablet {
+    padding: 10px;
+    &__image {
+      display: none;
+    }
+    &__subtitle {
+      display: none;
+    }
+  }
+  @media @phone {
+    justify-content: center;
+    padding: 20px;
+    margin-bottom: 30px;
+    &__left-container {
+      justify-content: center;
+      align-items: center;
+    }
+    &__image {
+      display: none;
+    }
+    &__subtitle {
+      display: none;
+    }
+    &__title {
+      text-align: left;
+      .title-font(300, italic-light, 48px);
+      line-height: 48px;
+      text-align: center;
+      span {
+        .title-font(700,normal,48px);
+      }
+    }
+    &__marker {
+      display: none;
+    }
+    &__description {
+      text-align: center;
+    }
   }
 }
