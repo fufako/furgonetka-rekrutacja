@@ -20,18 +20,35 @@
     display: flex;
     flex-direction: column;
     justify-content: center;
+    /* Remove arrows from input with type number in Chrome, Safari, Edge, Opera */
+    input::-webkit-outer-spin-button,
+    input::-webkit-inner-spin-button {
+      -webkit-appearance: none;
+      margin: 0;
+    }
+    /* Remove arrows from input with type number in Firefox */
+    input[type="number"] {
+      -moz-appearance: textfield;
+    }
     &-label {
-      .text-font(400, 14px);
       margin: 10px 0;
     }
     &-input {
       .input();
+      &--error {
+        border-color: @error-border-color;
+        box-shadow: inset 0 0 0 1px @error-border-color;
+        outline: none;
+      }
     }
     &-textarea {
       .input();
       width: 768px;
       height: 321px;
       margin-bottom: 10px;
+      padding: 10px;
+      resize: none;
+      .text-font(300, 14px);
     }
     &-error-message {
       margin: 0px;
@@ -40,7 +57,7 @@
       .text-font(400,12px);
     }
     &-button {
-      width: 280px;
+      width: 300px;
       .button(@button-bg-color-yellow, @button-border-color-yellow);
       &:last-child {
         text-align: center;
