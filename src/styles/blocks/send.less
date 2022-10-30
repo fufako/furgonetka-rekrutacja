@@ -13,6 +13,7 @@
   }
   &__title {
     .title-font(500,normal,48px);
+    align-items: center;
     width: 664px;
     margin: 5px;
     span {
@@ -24,5 +25,35 @@
   }
   &__button {
     .button(@button-bg-color-yellow, @button-border-color-yellow);
+  }
+  @media @phone {
+    padding: 20px;
+    position: relative;
+    &__image {
+      position: absolute;
+      opacity: 0.2;
+      top: 0;
+    }
+    &__title {
+      width: auto;
+      .title-font(300, italic-light, 38px);
+      line-height: 48px;
+      text-align: center;
+      span {
+        .title-font(700,normal,38px);
+      }
+    }
+    &__description {
+      width: 320px;
+      margin: 60px;
+      text-align: center;
+    }
+    &__right-container {
+      display: flex;
+      flex-direction: column;
+      z-index: 1;
+      justify-content: center;
+      align-items: center;
+    }
   }
 }

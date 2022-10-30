@@ -5,19 +5,18 @@
   align-items: center;
   padding: 100px;
   gap: 15px;
-  //   width: 1440px;
   background-color: @secondary-background;
   &__container {
     display: flex;
     flex-direction: column;
-    justify-content: center; //xxx
+    justify-content: center;
     align-items: center;
     padding: 0px;
     gap: 24px;
-    // width: 1440px;
   }
   &__title {
     .title-font(500, italic, 48px);
+    text-align: center;
     line-height: 110%;
     margin: 5px;
     span {
@@ -33,9 +32,22 @@
   }
 
   @media @tablet {
+    padding: 100px 20px;
     justify-content: center;
+    &__title {
+      .title-font(300, italic-light, 48px);
+      line-height: 48px;
+      text-align: center;
+      span {
+        .title-font(700,normal,48px);
+      }
+    }
+    &__description {
+      width: 320px;
+    }
   }
   @media @phone {
+    padding: 20px;
     &__container {
       padding: 10px;
       width: 320px;

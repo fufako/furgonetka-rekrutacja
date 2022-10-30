@@ -8,6 +8,7 @@
   &__title {
     .title-font(500, italic, 48px);
     margin: 5px;
+    align-items: center;
     span {
       .title-font(500, normal, 48px);
     }
@@ -75,5 +76,48 @@
   &__courier-xpress {
     background-color: @courier-bg-color-black;
     color: @courier-text-color-white;
+  }
+  @media @phone {
+    padding: 20px;
+    &__title {
+      .title-font(300, italic-light, 38px);
+      line-height: 48px;
+      text-align: center;
+      span {
+        .title-font(700,normal,38px);
+      }
+    }
+    &__description {
+      width: 320px;
+    }
+    &__options {
+      text-align: center;
+      position: relative;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+
+      &-container {
+        z-index: 10;
+        gap: 20px;
+      }
+    }
+    &__image {
+      position: absolute;
+      bottom: 0px;
+      opacity: 0.2;
+    }
+    &__option {
+      align-items: center;
+      flex-direction: column;
+      gap: 0;
+      padding: 10px 0;
+      &-image {
+        display: none;
+      }
+      &-text {
+        margin: 0;
+      }
+    }
   }
 }

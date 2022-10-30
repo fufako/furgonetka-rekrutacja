@@ -7,6 +7,7 @@
   padding: 100px;
   &__title {
     .title-font(500, normal, 48px);
+    align-items: center;
     span {
       .title-font(500, italic, 48px);
     }
@@ -18,7 +19,6 @@
     align-items: center;
     padding: 0px;
     gap: 96px;
-    width: 1220px;
     height: 250px;
     &-info-container {
       display: flex;
@@ -41,7 +41,37 @@
     }
   }
   @media @tablet {
-    padding: 10px;
+    padding: 100px 20px;
+    &__title {
+      .title-font(300, italic-light, 48px);
+      line-height: 48px;
+      text-align: center;
+      span {
+        .title-font(700,normal,48px);
+      }
+    }
+    &__shipment {
+      text-align: center;
+      position: relative;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      &-image {
+        position: absolute;
+        opacity: 0.2;
+      }
+      &-info-container {
+        z-index: 1;
+        padding: 0;
+      }
+      &-title {
+        text-align: center;
+      }
+      &-info-container {
+        justify-content: center;
+        align-items: center;
+      }
+    }
   }
   @media @phone {
     justify-content: center;

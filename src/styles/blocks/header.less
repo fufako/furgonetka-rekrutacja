@@ -28,7 +28,9 @@
     .title-font(300, italic-light, 68px);
     line-height: 75px;
     letter-spacing: -0.035em;
-    margin: 0px; //xxx
+    align-items: center;
+    margin: 0px;
+    position: relative;
     span {
       .title-font(700,normal,68px);
     }
@@ -46,9 +48,8 @@
     height: 352px;
   }
   &__marker {
-    position: absolute;
-    left: 0px;
-    top: 176px;
+    position: relative;
+    top: -45px;
     z-index: -1;
   }
   @media @tablet {
@@ -58,6 +59,33 @@
     }
     &__subtitle {
       display: none;
+    }
+  }
+  @media @tablet {
+    padding: 100px 20px;
+    position: relative;
+    &__marker {
+      display: none;
+    }
+    &__title {
+      position: relative;
+      margin: 40px 0;
+      .title-font(300, italic-light, 58px);
+      line-height: 58px;
+
+      span {
+        .title-font(700,normal,58px);
+      }
+    }
+    &__description {
+      margin: 0 20px 20px 0px;
+    }
+    &__image {
+      display: block;
+      z-index: -1;
+      opacity: 0.2;
+      position: absolute;
+      right: 40px;
     }
   }
   @media @phone {
@@ -75,7 +103,6 @@
       display: none;
     }
     &__title {
-      text-align: left;
       .title-font(300, italic-light, 48px);
       line-height: 48px;
       text-align: center;

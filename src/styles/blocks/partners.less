@@ -6,7 +6,7 @@
   text-align: center;
   padding: 100px;
   &__title {
-    width: 940px;
+    max-width: 940px;
     height: 106px;
     margin: 5px;
     .title-font(500, italic, 48px);
@@ -20,18 +20,37 @@
     .text-font(300, 16px);
   }
   &__container {
-    &-main {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 24px;
+    width: 700px;
+    flex-wrap: wrap;
+  }
+  @media @phone {
+    padding: 20px;
+    &__title {
+      width: auto;
+      .title-font(300, italic-light, 38px);
+      line-height: 48px;
+      text-align: center;
+      span {
+        .title-font(700,normal,38px);
+      }
+    }
+    &__description {
+      width: 320px;
+      margin: 60px;
+    }
+    &__container {
+      margin-top: 20px;
+      gap: 20px;
+      width: 320px;
       display: flex;
-      flex-direction: column;
       justify-content: center;
       align-items: center;
-      gap: 24px;
-    }
-    &-upper,
-    &-lower {
-      display: flex;
-      gap: 28px;
-      padding: 0;
+      flex-wrap: wrap;
     }
   }
 }
