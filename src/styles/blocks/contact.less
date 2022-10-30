@@ -58,11 +58,31 @@
     }
     &-button {
       width: 300px;
+      margin-top: 10px;
       .button(@button-bg-color-yellow, @button-border-color-yellow);
       &:last-child {
         text-align: center;
         align-self: center;
       }
+      &--success {
+        .button(green, @button-border-color-yellow);
+        width: 300px;
+        margin-top: 10px;
+        &:last-child {
+          text-align: center;
+          align-self: center;
+        }
+      }
+    }
+  }
+  &__success {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    &-title {
+      margin: 5px;
+      .title-font(500, normal, 48px);
     }
   }
 }
