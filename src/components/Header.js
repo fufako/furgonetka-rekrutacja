@@ -6,14 +6,14 @@ const Header = () => (
     <div className="header__left-container">
       <p className="header__subtitle">FURGONETKA</p>
       <h1 className="header__title">
-        <span className="header__title-bolder">Przesyłki krajowe </span>z
-        Furgonetką
+        <span>Przesyłki krajowe </span>z Furgonetką
       </h1>
       <img
         src={UnderlineMarker}
         alt="underline-marker"
         className="header__marker"
       />
+
       <p className="header__description">
         Nadawaj przesyłki krajowe o różnych gabarytach ze sprawdzonymi
         przewoźnikami – z dostawą pod drzwi, do punktów odbioru i automatów
