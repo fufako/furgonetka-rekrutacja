@@ -12,7 +12,7 @@ const Form = ({ setIsFormSend }) => {
 
   const mailRegex =
     /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/
-  const nameRegex = /^[a-zA-Z]/
+  const nameRegex = /^[a-zA-Z]+$/
 
   return (
     <>
@@ -33,6 +33,7 @@ const Form = ({ setIsFormSend }) => {
                 "Niepoprawny numer telefonu (może zawierać od 9 do 14 cyfr)",
             },
           }}
+          type="number"
           methods={methods}
         />
         <Input
@@ -47,6 +48,7 @@ const Form = ({ setIsFormSend }) => {
             minLength: { value: 2, message: "Podane imię jest za krótkie" },
             maxLength: { value: 45, message: "Podane imię jest za długie" },
           }}
+          type="text"
           methods={methods}
         />
         <Input
@@ -57,6 +59,7 @@ const Form = ({ setIsFormSend }) => {
             minLength: { value: 2, message: "Podana wartość jest za krótka" },
             maxLength: { value: 120, message: "Podana wartość jest za długa" },
           }}
+          type="text"
           methods={methods}
         />
         <Input
@@ -69,6 +72,7 @@ const Form = ({ setIsFormSend }) => {
               message: "Podany e-mail jest niepoprawny",
             },
           }}
+          type="text"
           methods={methods}
         />
 
@@ -104,7 +108,7 @@ const Input = ({ label, name, config, type, methods }) => {
   const errorMessage = errors[name]?.message
 
   return (
-    <>
+    <div className="contact__form-input-container">
       <label htmlFor={name} className="contact__form-label">
         {label}
       </label>
@@ -118,6 +122,6 @@ const Input = ({ label, name, config, type, methods }) => {
       {errorMessage && (
         <p className="contact__form-error-message">{errorMessage}</p>
       )}
-    </>
+    </div>
   )
 }
