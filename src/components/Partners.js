@@ -18,15 +18,13 @@ import PallexLogo from "../images/partners/Pallex.svg"
 // Mogłbym po prostu zmapować wszystkich partnerów i wrzucić ich do jednego kontenera,
 // jednak zostałem przy rozwiązaniu z górnym i dolnym kontenerem.
 
-const partnersUpperRow = [
+const partners = [
   DhlLogo,
   FedExLogo,
   GlsLogo,
   PocztexLogo,
   OrlenLogo,
   DeligooLogo,
-]
-const partnersLowerRow = [
   DpdLogo,
   UpsLogo,
   InPostLogo,
@@ -35,7 +33,7 @@ const partnersLowerRow = [
   XpressDeliveryLogo,
   PallexLogo,
 ]
-//KEYS?
+
 const Partners = () => {
   return (
     <section className="partners">
@@ -48,17 +46,10 @@ const Partners = () => {
         Delivery i PallEx. Porównuj oferty najtańszych kurierów krajowych i
         wybierz usługę, którą potrzebujesz.
       </p>
-      <div className="partners__container-main">
-        <div className="partners__container-upper">
-          {partnersUpperRow.map((partner) => (
-            <img src={partner} alt="partner-logo" key={partner}></img>
-          ))}
-        </div>
-        <div className="partners__container-lower">
-          {partnersLowerRow.map((partner) => (
-            <img src={partner} alt="partner-logo" key={partner}></img>
-          ))}
-        </div>
+      <div className="partners__container">
+        {partners.map((partner) => (
+          <img src={partner} alt="partner-logo" key={partner}></img>
+        ))}
       </div>
     </section>
   )
