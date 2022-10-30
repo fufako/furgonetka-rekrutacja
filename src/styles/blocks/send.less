@@ -13,8 +13,8 @@
   }
   &__title {
     .title-font(500,normal,48px);
-    align-items: center;
-    width: 664px;
+    text-align: left;
+    max-width: 664px;
     margin: 5px;
     span {
       .title-font(500,italic,48px);
@@ -22,12 +22,13 @@
   }
   &__description {
     .text-font(300,16px);
+    text-align: left;
   }
   &__button {
     .button(@button-bg-color-yellow, @button-border-color-yellow);
   }
   @media @tablet {
-    padding: 100px 20px;
+    padding: 200px 20px;
     position: relative;
     &__title {
       width: auto;

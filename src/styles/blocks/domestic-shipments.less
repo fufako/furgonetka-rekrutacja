@@ -6,8 +6,8 @@
   gap: 30px;
   padding: 100px;
   &__title {
+    text-align: center;
     .title-font(500, normal, 48px);
-    align-items: center;
     span {
       .title-font(500, italic, 48px);
     }
@@ -18,7 +18,7 @@
     justify-content: center;
     align-items: center;
     padding: 0px;
-    gap: 96px;
+    gap: 20px;
     height: 250px;
     &-info-container {
       display: flex;
@@ -29,7 +29,11 @@
       width: 496px;
       height: 149px;
     }
+    &-image {
+      width: 300px;
+    }
     &-title {
+      text-align: center;
       .title-font(700, normal, 32px);
       margin: 10px;
     }
@@ -43,11 +47,11 @@
   @media @tablet {
     padding: 100px 20px;
     &__title {
-      .title-font(300, italic, 48px);
+      .title-font(500, italic, 48px);
       line-height: 48px;
       text-align: center;
       span {
-        .title-font(700,normal,48px);
+        .title-font(500,normal,48px);
       }
     }
     &__shipment {
