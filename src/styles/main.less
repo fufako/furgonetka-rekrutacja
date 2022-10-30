@@ -1,5 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,500;0,700;1,500&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,500;0,700;1,300;1,500&display=swap");
 @import "./variables.less";
 @import "./mixins.less";
 @import "./blocks/navbar.less";
@@ -12,9 +12,8 @@
 @import "./blocks/send.less";
 @import "./blocks/contact.less";
 
-// * {
-//   outline: 1px solid red;
-// }
+@tablet: ~"only screen and (max-width: 768px)";
+@phone: ~"only screen and (max-width: 576px)";
 
 :root {
   .text-font();
